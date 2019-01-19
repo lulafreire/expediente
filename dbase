@@ -1,0 +1,184 @@
+-- phpMyAdmin SQL Dump
+-- version 2.6.1-rc1
+-- http://www.phpmyadmin.net
+-- 
+-- Servidor: localhost
+-- Tempo de Generação: Jan 19, 2019 at 11:08 AM
+-- Versão do Servidor: 5.0.18
+-- Versão do PHP: 5.1.2
+-- 
+-- Banco de Dados: `expediente`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `anexos`
+-- 
+
+CREATE TABLE `anexos` (
+  `id` varchar(9) NOT NULL default '',
+  `anexo` varchar(255) NOT NULL default '',
+  `tam` varchar(100) NOT NULL default '',
+  `descricao` varchar(255) NOT NULL default '',
+  `origem` varchar(100) NOT NULL default '',
+  `dtEnvio` date NOT NULL default '0000-00-00'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `cartas_emitidas`
+-- 
+
+CREATE TABLE `cartas_emitidas` (
+  `id` mediumint(9) NOT NULL auto_increment,
+  `num` float NOT NULL,
+  `data` date NOT NULL default '0000-00-00',
+  `emitente` varchar(255) NOT NULL,
+  `destinatario` varchar(255) NOT NULL default '',
+  `end` varchar(150) NOT NULL,
+  `cep` varchar(20) NOT NULL,
+  `cidade` varchar(150) NOT NULL,
+  `assunto` varchar(255) NOT NULL default '',
+  `tratamento` varchar(100) NOT NULL,
+  `texto` text NOT NULL,
+  `anexo` varchar(100) NOT NULL default '',
+  `tam` varchar(100) NOT NULL default '',
+  `descricao` varchar(255) NOT NULL default '',
+  `resposta` varchar(9) NOT NULL,
+  `subtitulo` varchar(255) NOT NULL,
+  `fundLegal` varchar(255) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `destinatarios`
+-- 
+
+CREATE TABLE `destinatarios` (
+  `id` mediumint(9) NOT NULL auto_increment,
+  `nome` varchar(255) NOT NULL default '',
+  `cargo` varchar(255) NOT NULL default '',
+  `orgao` varchar(255) NOT NULL default '',
+  `end` varchar(255) NOT NULL default '',
+  `cep` varchar(10) NOT NULL default '',
+  `cidade` varchar(255) NOT NULL default '',
+  `email` varchar(255) NOT NULL default '',
+  `telefone` varchar(15) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=67 ;
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `eventos`
+-- 
+
+CREATE TABLE `eventos` (
+  `id` mediumint(9) NOT NULL default '0',
+  `data` date NOT NULL default '0000-00-00',
+  `origem` varchar(20) NOT NULL default '',
+  `descricao` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `memos_emitidos`
+-- 
+
+CREATE TABLE `memos_emitidos` (
+  `id` mediumint(9) NOT NULL auto_increment,
+  `emitente` varchar(2) NOT NULL,
+  `num` float default NULL,
+  `data` date NOT NULL default '0000-00-00',
+  `destinatario` varchar(255) NOT NULL default '',
+  `interessado` varchar(200) NOT NULL,
+  `assunto` varchar(255) NOT NULL default '',
+  `tratamento` varchar(100) NOT NULL,
+  `texto` text NOT NULL,
+  `anexo` varchar(100) NOT NULL default '',
+  `tam` varchar(100) NOT NULL default '',
+  `descricao` varchar(255) NOT NULL default '',
+  `resposta` varchar(9) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `memos_recebidos`
+-- 
+
+CREATE TABLE `memos_recebidos` (
+  `id` mediumint(9) NOT NULL auto_increment,
+  `emissor` varchar(255) NOT NULL default '',
+  `interessado` varchar(255) NOT NULL default '',
+  `assunto` varchar(255) NOT NULL default '',
+  `num` varchar(9) NOT NULL default '',
+  `data` date NOT NULL default '0000-00-00',
+  `anexo` varchar(255) NOT NULL default '',
+  `tam` varchar(100) NOT NULL default '',
+  `descricao` varchar(255) NOT NULL default '',
+  `resposta` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `modelos`
+-- 
+
+CREATE TABLE `modelos` (
+  `id` mediumint(9) NOT NULL auto_increment,
+  `descricao` varchar(255) NOT NULL,
+  `tipo` varchar(100) NOT NULL,
+  `texto` text NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `oficios_emitidos`
+-- 
+
+CREATE TABLE `oficios_emitidos` (
+  `id` mediumint(9) NOT NULL auto_increment,
+  `emitente` varchar(2) NOT NULL,
+  `num` float default NULL,
+  `data` date NOT NULL default '0000-00-00',
+  `destinatario` varchar(255) NOT NULL default '',
+  `assunto` varchar(255) NOT NULL default '',
+  `tratamento` varchar(100) NOT NULL,
+  `texto` text NOT NULL,
+  `anexo` varchar(100) NOT NULL default '',
+  `tam` varchar(100) NOT NULL default '',
+  `descricao` varchar(255) NOT NULL default '',
+  `resposta` varchar(9) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1514 ;
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `oficios_recebidos`
+-- 
+
+CREATE TABLE `oficios_recebidos` (
+  `id` mediumint(9) NOT NULL auto_increment,
+  `emissor` varchar(255) NOT NULL default '',
+  `assunto` varchar(255) NOT NULL default '',
+  `num` varchar(9) NOT NULL default '',
+  `data` date NOT NULL default '0000-00-00',
+  `anexo` varchar(255) NOT NULL default '',
+  `tam` varchar(100) NOT NULL default '',
+  `descricao` varchar(255) NOT NULL default '',
+  `resposta` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=720 ;
+        
