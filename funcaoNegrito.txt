@@ -1,0 +1,94 @@
+<%
+function TrataFormatacao (Palavra, Fonte, Tamanho)
+
+    TrataFormatacao=false
+    if instr(Palavra,"<b>")<>0 then
+        Palavra=replace(Palavra,"<b>","")
+        pdf.SetFont Fonte,"B",Tamanho
+    end if
+    if instr(Palavra,"</b>")<>0 then
+        Palavra=replace(Palavra,"</b>","")
+        TrataFormatacao=true
+    end if        
+    if instr(Palavra,"<i>")<>0 then
+        Palavra=replace(Palavra,"<i>","")
+        pdf.SetFont Fonte,"I",Tamanho
+    end if
+    if instr(Palavra,"</i>")<>0 then
+        Palavra=replace(Palavra,"</i>","")
+        TrataFormatacao=true            
+    end if    
+    
+end function
+
+Sub ParagrafoPDF (Texto, Largura, EspacoEntreLinhas, NomeFonte, TamanhoFonte)
+
+    Palavras=split(Texto," ")
+    tl=0
+    pl=0
+    for n=0 to ubound(Palavras)
+
+        DesligaFormatacao=TrataFormatacao(Palavras(n),NomeFonte,TamanhoFonte)
+
+        tl = tl + PDF.GetStringWidth(Palavras(n))
+        if tl>Largura then
+            fl=fl & (Largura-(tl-PDF.GetStringWidth(Palavras(n))))/pl & ";"
+            tl=PDF.GetStringWidth(Palavras(n))
+            pl=0        
+        end if    
+        pl = pl + 1
+        tl = tl + PDF.GetStringWidth(" ")
+        if DesligaFormatacao then
+            pdf.SetFont NomeFonte,"",TamanhoFonte
+        end if    
+    next    
+
+    fator=split(fl,";")
+
+    Palavras=split(Texto," ")
+    tl=0
+    l=0
+    fatoracum=0
+    f=0
+    for n=0 to ubound(Palavras)
+
+        DesligaFormatacao=TrataFormatacao(Palavras(n),NomeFonte,TamanhoFonte)
+
+        tl = tl + PDF.GetStringWidth(Palavras(n))
+        if tl>Largura then
+            CALL PDF.Ln (EspacoEntreLinhas)
+            tl=PDF.GetStringWidth(Palavras(n))
+            l = l + 1
+            fatoracum=0
+        end if    
+        tl = tl + PDF.GetStringWidth(" ")
+        if l>=ubound(fator) then
+            f = 0
+        else    
+            f = int((fatoracum + cdbl(fator(l))) - int(fatoracum))
+        end if    
+        CALL PDF.Cell(PDF.GetStringWidth(Palavras(n) & " ")+f,EspacoEntreLinhas,Palavras(n) & " ",0,0,"L")
+        if l<ubound(fator) then
+            fatoracum=fatoracum + cdbl(fator(l))
+            fatoracum2=fatoracum2 + f
+        end if    
+        if DesligaFormatacao then
+            pdf.SetFont NomeFonte,"",TamanhoFonte
+        end if    
+    next    
+
+end sub
+
+' Exemplo de uso:
+
+Texto = "Lorem <b>ipsum</b> dolor sit amet, <i>consectetur</i> adipiscing elit. Nulla felis nisi, malesuada in condimentum quis, tempus sit amet nisi. Aliquam at tellus elit, sed adipiscing nibh. Aliquam at adipiscing mi. Vivamus ultrices pretium libero, quis tempor lorem mollis porta. Aenean id eros tellus. Phasellus id vestibulum erat" 
+
+Largura=400
+EspacoEntreLinhas=20
+NomeFonte="Helvetica"
+TamanhoFonte=10
+
+ParagrafoPDF (Texto, Largura, EspacoEntreLinhas, NomeFonte, TamanhoFonte)
+
+
+%>
