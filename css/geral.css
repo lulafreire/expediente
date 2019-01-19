@@ -1,0 +1,75 @@
+.form {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #11418A; background-color: #FFFFFF; border: 1px #11418A solid}
+
+table.bordasimples {border-collapse: collapse;}
+table.bordasimples tr td {border:1px solid #CCCCCC;}
+
+table.semborda {border-collapse: collapse;}
+table.semborda tr td {border:0px solid #CCCCCC;}
+
+.bco09 {  font-family: Arial, Helvetica, sans-serif; font-size: 9px; color: #FFFFFF; text-decoration: none;}
+.bco10 {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; text-decoration: none;}
+.bco12 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; text-decoration: none;}
+.bco14 {  font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #FFFFFF; text-decoration: none;}
+.bco16 {  font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #FFFFFF; text-decoration: none;}
+.bco18 {  font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #FFFFFF; text-decoration: none;}
+.bco20 {  font-family: Arial, Helvetica, sans-serif; font-size: 20px; color: #FFFFFF; text-decoration: none;}
+.linkbco { color: #FFFFFF; text-decoration: none} A:hover {color: #FFFFFF; text-decoration: underline}
+
+.ama09 {  font-family: Arial, Helvetica, sans-serif; font-size: 9px; color: #FFFF00; text-decoration: none;}
+.ama10 {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFF00; text-decoration: none;}
+.ama12 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFF00; text-decoration: none;}
+.ama14 {  font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #FFFF00; text-decoration: none;}
+.ama16 {  font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #FFFF00; text-decoration: none;}
+.ama18 {  font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #FFFF00; text-decoration: none;}
+.ama20 {  font-family: Arial, Helvetica, sans-serif; font-size: 20px; color: #FFFF00; text-decoration: none;}
+.link_ama { color: #FFFF00; text-decoration: none} A:hover { color: #FFFFFF; text-decoration: underline}
+
+.vde09 {  font-family: Arial, Helvetica, sans-serif; font-size: 9px; color: #004E32; text-decoration: none;}
+.vde10 {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #004E32; text-decoration: none;}
+.vde12 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #004E32; text-decoration: none;}
+.vde14 {  font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #004E32; text-decoration: none;}
+.vde16 {  font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #004E32; text-decoration: none;}
+.vde18 {  font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #004E32; text-decoration: none;}
+.vde20 {  font-family: Arial, Helvetica, sans-serif; font-size: 20px; color: #004E32; text-decoration: none;}
+.linkvde { color: #004E32; text-decoration: none} A:hover {color: #004E32; text-decoration: underline}
+
+.ver09 {  font-family: Arial, Helvetica, sans-serif; font-size: 9px; color: #A01505; text-decoration: none;}
+.ver10 {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #A01505; text-decoration: none;}
+.ver12 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #A01505; text-decoration: none;}
+.ver14 {  font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #A01505; text-decoration: none;}
+.ver16 {  font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #A01505; text-decoration: none;}
+.ver18 {  font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #A01505; text-decoration: none;}
+.ver20 {  font-family: Arial, Helvetica, sans-serif; font-size: 20px; color: #A01505; text-decoration: none;}
+.linkver { color: #A01505; text-decoration: none} A:hover {color: #A01505; text-decoration: underline}
+
+.azul09 {  font-family: Arial, Helvetica, sans-serif; font-size: 9px; color: #11418A; text-decoration: none;}
+.azul10 {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #11418A; text-decoration: none;}
+.azul11 {  font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #11418A; text-decoration: none;}
+.azul12 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #11418A; text-decoration: none;}
+.azul14 {  font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #11418A; text-decoration: none;}
+.azul16 {  font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #11418A; text-decoration: none;}
+.azul18 {  font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #11418A; text-decoration: none;}
+.azul20 {  font-family: Arial, Helvetica, sans-serif; font-size: 20px; color: #11418A; text-decoration: none;}
+.linkazul { color: #11418A; text-decoration: none} A:hover {color: #11418A; text-decoration: underline}
+
+.pto09 {  font-family: Arial, Helvetica, sans-serif; font-size: 9px; color: #000000; text-decoration: none;}
+.pto10 {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; text-decoration: none;}
+.pto12 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; text-decoration: none;}
+.pto14 {  font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; text-decoration: none;}
+.pto16 {  font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #000000; text-decoration: none;}
+.pto18 {  font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000000; text-decoration: none;}
+.pto20 {  font-family: Arial, Helvetica, sans-serif; font-size: 20px; color: #000000; text-decoration: none;}
+.linkpto { color: #000000; text-decoration: none} A:hover {color: #000000; text-decoration: underline}
+
+.cza09 {  font-family: Arial, Helvetica, sans-serif; font-size: 9px; color: #595A61; text-decoration: none;}
+.cza10 {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #595A61; text-decoration: none;}
+.cza12 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #595A61; text-decoration: none;}
+.cza14 {  font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #595A61; text-decoration: none;}
+.cza16 {  font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #595A61; text-decoration: none;}
+.cza18 {  font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #595A61; text-decoration: none;}
+.cza20 {  font-family: Arial, Helvetica, sans-serif; font-size: 20px; color: #595A61; text-decoration: none;}
+.linkcza { color: #595A61; text-decoration: none} A:hover {color: #595A61; text-decoration: underline}
+
+.frasetxt { font-family: Georgia, Times New Roman, serif; font-size: 14px; color: #B0B0B0; }
+.fraseaut { font-family: Georgia, Times New Roman, serif; font-size: 10px; color: #B0B0B0; }
+

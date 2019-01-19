@@ -1,0 +1,126 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   font-size: 100%;
+   vertical-align: baseline;
+   background: transparent;
+}
+*{outline:none;}
+html{
+min-height: 100%; /*Sets the min height to the
+  height of the viewport.*/
+ width: 100%;
+ height: 100%; /*Effectively, this is min height
+  for IE5+/Win, since IE wrongly expands
+  an element to enclose its content.
+  This mis-behavior screws up modern
+  browsers*/
+ margin: 0;
+ padding: 0;
+ }
+
+#footer{
+   height: 43px; /* .push must be the same height as .footer */
+    padding-top:10px;
+    /*border-top:1px solid black; */
+    width:360px;
+    margin:0pt auto 0px;
+}
+#footer div p{
+  width:360px;
+}
+
+ #push {
+   height: 43px; /* .push must be the same height as .footer */
+    padding-top:10px;
+}
+
+.clearfix{
+   clear:both;
+   float:none;
+}
+#bigPic{
+   width:360px;
+   height:245px;
+   margin-left: 1px;
+   margin-right: 1px;
+   padding-left: 1px;
+   padding-right: 1px;
+   padding:1px;
+   border:0px solid #CE8909;
+   background-color:#FFFFff;
+   margin-bottom:11px;
+}
+#bigPic img{
+   position:absolute;
+   display:none;
+}
+ul#thumbs li.active{
+   border:1px solid #CE8909;
+   background:#FFFF80;
+   padding:2px;
+   padding-left: 1px;
+   padding-right: 1px;
+}
+ul#thumbs, ul#thumbs li{
+    margin:0;
+   padding:0;
+   padding-left: 1px;
+   padding-right: 1px;
+   list-style:none;
+}
+   
+ul#thumbs li{
+   float:left;
+    margin-right:2px;
+   margin-bottom:5px;
+   border:1px solid #CCC;
+   padding:2px;
+   padding-left: 1px;
+   padding-right: 1px;
+   cursor:pointer;
+}
+ul#thumbs img{
+   float:left;
+   width:80px;
+   height:80px;
+   line-height:80px;
+   overflow:hidden;
+   position:relative;
+   margin-left: 2px;
+   margin-right:2px;
+   z-index:1;
+}
+
+#tarja {
+top: 235px;
+left: 2px;
+width: 602px;
+height: 45px;
+margin: 0 auto;
+overflow: hidden;
+position: absolute;
+display: block;
+background: #000;
+/* for IE */ filter: alpha(opacity=80);
+/* CSS3 standard */ opacity: 0.8;
+z-index: 99;
+text-align: left;
+padding: 5px 5px 5px 5px;
+}
+
+#lock{
+position: absolute;
+top: 20px;
+right: 20px;
+}
